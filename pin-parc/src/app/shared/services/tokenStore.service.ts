@@ -62,8 +62,9 @@ export class TokenStoreService implements ITokenStoreService {
         for (i = 0; i < arRcookies.length; i++) {
             x = arRcookies[i].substr(0, arRcookies[i].indexOf("="));
             y = arRcookies[i].substr(arRcookies[i].indexOf("=") + 1);
-            x = x.replace(/^\s+|\s+$/g, "");
-            if (x == cName) {
+            x = x.replace(/^\s+|\s+$/g, "");            
+            if (x == cName) {      
+                console.log(y);          
                 return unescape(y);
             }
         }

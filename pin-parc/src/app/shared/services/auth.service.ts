@@ -126,12 +126,15 @@ export class AuthService {
     }
 
     get authUser(): UserModel {
+        console.log("შემოვიდა");
         var eToken = this.tokenStoreService.getToken();
+        console.log(eToken)
         //console.log(eToken);
         var decodedToken = this.tokenStoreService.decodeToken(eToken);
         if (!decodedToken) {
             return null;
         }
+        console.log(decodedToken);
         let user: UserModel = UserModel.parseJson(decodedToken);
         return user;
     }

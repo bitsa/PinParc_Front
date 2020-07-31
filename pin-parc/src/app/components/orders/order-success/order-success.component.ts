@@ -24,7 +24,7 @@ export class OrderSuccessComponent implements OnInit {
     
     setTimeout(() => {
       this.goBack();
-    }, 2500);
+    }, 5000);
     
   }
 

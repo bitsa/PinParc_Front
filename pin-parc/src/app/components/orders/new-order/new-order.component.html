@@ -10,7 +10,7 @@
     <div class="direction direction--dark">
         <div class="d-flex justify-between">            
             <div class="direction__fields">
-                {{model | json}}
+               
                 <div class="direction__field">
                     <input type="text" name="from" [(ngModel)]="model.destFrom" id="from" placeholder="&nbsp;" />
                     <label for="from">From</label>
@@ -50,15 +50,15 @@
     <div class="toggle-tabs mt-20">
         <div class="toggle-tabs__title">Delivery:</div>
         <div class="toggle-tabs__buttons">
-            <button class="toggle-tabs__btn" >
+            <button class="toggle-tabs__btn" (click)="setDelivery(1)" >
                 <div class="toggle-tabs__btn__title">Express</div>
                 <div class="toggle-tabs__btn__subtitle">1 day - ₾ 10</div>
             </button>
-            <button class="toggle-tabs__btn toggle-tabs__btn--active">
+            <button class="toggle-tabs__btn toggle-tabs__btn--active" (click)="setDelivery(2)">
                 <div class="toggle-tabs__btn__title">Standart</div>
                 <div class="toggle-tabs__btn__subtitle">3 day - ₾ 5</div>
             </button>
-            <button class="toggle-tabs__btn">
+            <button class="toggle-tabs__btn" (click)="setDelivery(3)">
                 <div class="toggle-tabs__btn__title">Same-day</div>
                 <div class="toggle-tabs__btn__subtitle">1/2 - ₾ 2</div>
             </button>
@@ -67,11 +67,11 @@
     <div class="toggle-tabs toggle-tabs--payment mt-20">
         <div class="toggle-tabs__title">Payment Method:</div>
         <div class="toggle-tabs__buttons">
-            <button class="toggle-tabs__btn">
+            <button class="toggle-tabs__btn" (click)="setPayment(1)">
                 <div class="toggle-tabs__btn__icon is-cash mb-10"></div>
                 <div class="toggle-tabs__btn__title">Cash</div>
             </button>
-            <button class="toggle-tabs__btn toggle-tabs__btn--active">
+            <button class="toggle-tabs__btn toggle-tabs__btn--active" (click)="setPayment(2)">
                 <div class="toggle-tabs__btn__icon is-card mb-10"></div>
                 <div class="toggle-tabs__btn__title">Card</div>
             </button>
