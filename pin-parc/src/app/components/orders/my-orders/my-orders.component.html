@@ -1,0 +1,142 @@
+<main class="my-orders" id="maain">
+  <div class="d-flex align-center justify-between pl-18 pr-18 mb-20">
+    <button class="burger burger--light"></button>
+    <h1 class="my-orders__title">My Orders</h1>
+  </div>
+
+  <app-menu></app-menu>
+
+  <div class="my-orders-wrapper">
+
+    <ng-container *ngFor="let order of model">
+      <div class="direction-heading">
+        <div class="direction__title">{{order.statusString}}</div>
+        <div class="direction__date">{{order.date}} - {{order.time}}</div>
+      </div>
+      <div class="direction" style="margin-bottom:25px;">
+        <div class="d-flex justify-between">
+          <div class="direction__fields">
+            <div class="direction__field">
+              <input  type="text" name="from" [value]="order.destFrom" id="from" placeholder="&nbsp;" />
+              <label for="from">Pickup Location</label>
+            </div>
+            <div class="direction__field">
+              <input  type="text" [value]="order.destTo" name="to" id="to" placeholder="&nbsp;" />
+              <label for="to">Destination Location</label>
+            </div>
+          </div>
+          <div class="direction__actions">
+            <button class="direction__btn">
+              <img src="/assets/img/icons/cross.svg" alt="" class="direction__img" />
+            </button>
+            <button class="direction__btn">
+              <img src="/assets/img/icons/cross.svg" alt="" class="direction__img" />
+            </button>
+          </div>
+        </div>
+        <div class="direction__order">
+          <div class="direction__type">Parcel Type:</div>
+          <div class="direction__value">{{order.parcelType}}</div>
+        </div>
+        <div class="direction__order">
+          <div class="direction__type">Delivery:</div>
+          <div class="direction__value">
+            {{order.deliveryType}}
+          </div>
+        </div>
+        <div class="direction__sums">
+          <div>
+            <div class="direction__key">Price</div>
+            <div class="direction__num">₾ {{order.price}}</div>
+          </div>
+          <div>
+            <div class="direction__key">Weight</div>
+            <div class="direction__num">{{order.weight | json}} Kg</div>
+          </div>
+          <div>
+            <div class="direction__key">Distantce</div>
+            <div class="direction__num">{{order.distance}} Km</div>
+          </div>
+        </div>
+        <div *ngIf="order.courierID" class="card card--orders">
+          <div class="card__img bgImage"></div>
+          <div class="card__info">
+            <div class="card__name">Giorgi Bitsadze</div>
+            <div class="card__phone">
+              597 123 193
+            </div>
+          </div>
+          <div class="card__status">Courier</div>
+        </div>
+      </div>
+    </ng-container>
+
+    
+
+
+    <!-- <div class="direction-heading mt-50">
+      <div class="direction__title">Progress</div>
+      <div class="direction__date">JAN 10 - 12:30 PM</div>
+    </div>
+    <div class="direction">
+      <div class="d-flex justify-between">
+        <div class="direction__fields">
+          <div class="direction__field">
+            <input type="text" name="from" value="Tevdore Mgvdeli 16 , Tbilisi" id="from1" placeholder="&nbsp;" />
+            <label for="from1">Pickup Location</label>
+          </div>
+          <div class="direction__field">
+            <input type="text" value="Ana politkovskaia  3, Tbilisi" name="to" id="to1" placeholder="&nbsp;" />
+            <label for="to1">Destination Location</label>
+          </div>
+        </div>
+        <div class="direction__actions">
+          <button class="direction__btn">
+            <img src="/assets/img/icons/cross.svg" alt="" class="direction__img" />
+          </button>
+          <button class="direction__btn">
+            <img src="/assets/img/icons/cross.svg" alt="" class="direction__img" />
+          </button>
+        </div>
+      </div>
+      <div class="direction__order">
+        <div class="direction__type">Parcel Type:</div>
+        <div class="direction__value">Clothes</div>
+      </div>
+      <div class="direction__order">
+        <div class="direction__type">Delivery:</div>
+        <div class="direction__value">
+          Standart /
+          <small>3 day -₾ 5</small>
+        </div>
+      </div>
+      <div class="direction__sums">
+        <div>
+          <div class="direction__key">Price</div>
+          <div class="direction__num">₾ 32</div>
+        </div>
+        <div>
+          <div class="direction__key">Weight</div>
+          <div class="direction__num">9 Kg</div>
+        </div>
+        <div>
+          <div class="direction__key">Distantce</div>
+          <div class="direction__num">13 Km</div>
+        </div>
+      </div>
+      <div class="card card--orders">
+        <div class="card__img bgImage"></div>
+        <div class="card__info">
+          <div class="card__name">Giorgi Bitsadze</div>
+          <div class="card__phone">
+            597 123 193
+          </div>
+        </div>
+        <div class="card__status">Courier</div>
+      </div>
+    </div> -->
+
+
+  </div>
+
+</main>

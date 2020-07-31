@@ -1,0 +1,83 @@
+<main class="order">
+
+    <div class="d-flex align-center justify-between pl-18 pr-18 mb-20">
+        <button class="burger burger--light"></button>
+        <h1 class="my-orders__title">New Order</h1>
+    </div>
+
+    <app-menu></app-menu>
+
+    <div class="direction direction--dark">
+        <div class="d-flex justify-between">            
+            <div class="direction__fields">
+                {{model | json}}
+                <div class="direction__field">
+                    <input type="text" name="from" [(ngModel)]="model.destFrom" id="from" placeholder="&nbsp;" />
+                    <label for="from">From</label>
+                </div>
+                <div class="direction__field">
+                    <input type="text" name="to" [(ngModel)]="model.destTo" id="to" placeholder="&nbsp;" />
+                    <label for="to">To</label>
+                </div>
+            </div>
+            <div class="direction__actions">
+                <button class="direction__btn">
+                    <img src="/assets/img/icons/cross.svg" alt="" class="direction__img" />
+                </button>
+                <button class="direction__btn">
+                    <img src="/assets/img/icons/cross.svg" alt="" class="direction__img" />
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex align-center justify-between mt-20">
+        <input class="input__date w-200px" type="date" [(ngModel)]="model.date" placeholder="Date" />
+        <input class="input__time w-120px" type="time" [(ngModel)]="model.time" placeholder="Time" />
+    </div>
+    <select class="dropdown mt-20" required [(ngModel)]="model.parcelTypeID">
+        <option value="" disabled selected hidden>Parcel Type</option>
+        <option value="1">Letter</option>
+        <option value="2">Small</option>
+        <option value="3">normal</option>
+        <option value="4">big</option>
+        <option value="5">extra</option>        
+    </select>
+    <div class="text-field mt-5">
+        <input type="text" name="weight" id="weight" placeholder="&nbsp;" [(ngModel)]="model.weight" />
+        <label for="weight">Weight</label>
+        <div class="text-field__mask">kg</div>
+    </div>
+    <div class="toggle-tabs mt-20">
+        <div class="toggle-tabs__title">Delivery:</div>
+        <div class="toggle-tabs__buttons">
+            <button class="toggle-tabs__btn" >
+                <div class="toggle-tabs__btn__title">Express</div>
+                <div class="toggle-tabs__btn__subtitle">1 day - ₾ 10</div>
+            </button>
+            <button class="toggle-tabs__btn toggle-tabs__btn--active">
+                <div class="toggle-tabs__btn__title">Standart</div>
+                <div class="toggle-tabs__btn__subtitle">3 day - ₾ 5</div>
+            </button>
+            <button class="toggle-tabs__btn">
+                <div class="toggle-tabs__btn__title">Same-day</div>
+                <div class="toggle-tabs__btn__subtitle">1/2 - ₾ 2</div>
+            </button>
+        </div>
+    </div>
+    <div class="toggle-tabs toggle-tabs--payment mt-20">
+        <div class="toggle-tabs__title">Payment Method:</div>
+        <div class="toggle-tabs__buttons">
+            <button class="toggle-tabs__btn">
+                <div class="toggle-tabs__btn__icon is-cash mb-10"></div>
+                <div class="toggle-tabs__btn__title">Cash</div>
+            </button>
+            <button class="toggle-tabs__btn toggle-tabs__btn--active">
+                <div class="toggle-tabs__btn__icon is-card mb-10"></div>
+                <div class="toggle-tabs__btn__title">Card</div>
+            </button>
+        </div>
+    </div>
+    <button class="btn w-100 btn--lightblue mt-30" (click)="on_order()">ORDER</button>
+
+
+</main>

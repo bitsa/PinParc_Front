@@ -1,0 +1,127 @@
+@import "../../../assets/scss/colors";
+
+.bgImage{
+    background-image: url(/assets/img/avatar.jpg)
+}
+
+
+
+
+.my-orders {
+    padding-top: 55px;
+  
+    &__title {
+      color: #454F63;
+      font-size: 30px;
+      font-weight: 600;
+    }
+  }
+  
+  .my-orders-wrapper {
+    padding: 0 18px;
+    padding-bottom: 30px;
+    overflow-y: scroll;
+    height: 685px;
+  }
+
+
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    background-color: #454F63;
+    border-radius: 12px;
+  
+    &__img {
+      height: 62px;
+      width: 62px;
+      border-radius: 12px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-right: 16px;
+    } 
+   
+  
+    &__name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+  
+    &__phone {
+      color: rgba(#fff, .8);
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+    }
+  
+    &__logo {
+      height: 14px;
+      width: 14px;
+      margin-right: 10px;
+    }
+  
+    &__rating {
+      margin-left: auto;
+      position: relative;
+      text-align: center;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(#959DAD, 0.16);
+        border-radius: 1px;
+      }
+    }
+  
+    &__value {
+      font-size: 20px;
+      font-weight: 600;
+      color: #3ACCE1;
+      margin-bottom: 3px;
+    }
+  
+    &__subtitle {
+      font-size: 13px;
+      color: #78849E;
+    }
+  
+    &--orders {
+      background-color: #fff;
+      padding: 0;
+      padding-top: 36px;
+      border-radius: 0;
+      position: relative;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        top: 20px;
+        height: 1px;
+        background-color: rgba(#F4F4F6,.99);
+      }
+  
+      .card__name {
+        font-size: 16px;
+        color: #454F63;
+        margin-bottom: 5px;
+      }
+      .card__phone {
+        font-size: 14px;
+        font-weight: 400;
+        color: #78849E;
+      }
+      .card__status {
+        margin-left: auto;
+        font-size: 14px;
+        color: #78849E;
+      }
+    }
+  }

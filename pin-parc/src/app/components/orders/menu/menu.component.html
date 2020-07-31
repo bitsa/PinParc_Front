@@ -1,0 +1,36 @@
+<!-- <button class="burger"></button> -->
+
+<div class="menu">
+    
+    
+  <button class="menu__btn"></button>
+  <nav class="menu__items">
+    <a class="menu__item" [routerLink]="['/orders/my-orders']">
+      <img src="/assets/img/icons/home.svg" alt="home" class="menu__icon" />
+      Home
+    </a>
+    <a [routerLink]="['/orders/new-order']" class="menu__item">
+      <img
+        src="/assets/img/icons/orders.svg"
+        alt="myorders"
+        class="menu__icon"
+      />
+      New Order
+    </a>
+    <a href="#" class="menu__item">
+      <img
+        src="/assets/img/icons/payments.svg"
+        alt="payments"
+        class="menu__icon"
+      />
+      Payments
+    </a>
+    <a href="#" class="menu__item">
+      <img src="/assets/img/icons/contacts.svg" alt="home" class="menu__icon" />
+      Contacts Us
+    </a>
+  </nav>
+  <a href="#" class="menu__link mb-30 mt-auto">About Us</a>
+  <a href="#" class="menu__link mb-100">Privacy Policy</a>
+  <a class="menu__link" (click)="logOut()">Log Out</a>
+</div>

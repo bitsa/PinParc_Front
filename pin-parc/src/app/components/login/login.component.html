@@ -8,32 +8,32 @@
     <div class="tabs__content active">
       <div class="form-wrapper">
         <div class="form__field">
-          <input type="text" name="email" id="email" placeholder="&nbsp;"/>
+          <input type="text" name="email" id="email" placeholder="&nbsp;" [(ngModel)]="userName"/>
           <label for="email">Email</label>
         </div>
         <div class="form__field">
-          <input class="" type="password" name="password" id="password" placeholder="&nbsp;"/>
+          <input class="" type="password" name="password" id="password" placeholder="&nbsp;" [(ngModel)]="password"/>
           <label for="password">Password</label>
         </div>
-        <button class="btn btn--block btn--lightblue w-100">CONTINUE</button>
+        <button class="btn btn--block btn--lightblue w-100" (click)="loginClick()">CONTINUE</button>
       </div>
     </div>
 
     <div class="tabs__content">
       <div class="form-wrapper">
         <div class="form__field">
-          <input type="text" name="fullName" id="fullName" placeholder="&nbsp;"/>
-          <label for="fullName">Full Name</label>
+          <input type="text" name="fullName" id="fullName" placeholder="&nbsp;" [(ngModel)]="userName"/>
+          <label for="fullName">userName</label>
         </div>
         <div class="form__field">
-          <input type="text" name="email" id="email1" placeholder="&nbsp;"/>
+          <input type="text" name="email" id="email1" placeholder="&nbsp;" [(ngModel)]="eMail"/>
           <label for="email1">Email</label>
         </div>
         <div class="form__field">
-          <input type="password" name="password" id="password1" placeholder="&nbsp;"/>
+          <input type="password" name="password" id="password1" placeholder="&nbsp;" [(ngModel)]="password"/>
           <label for="password1">Password</label>
         </div>
-        <button class="btn btn--block btn--lightblue w-100">CONTINUE</button>
+        <button class="btn btn--block btn--lightblue w-100" (click)="registerClick()">CONTINUE</button>
       </div>
     </div>
   </div>

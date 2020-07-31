@@ -31,6 +31,10 @@ setTimeout(() => {
   $('.menu__btn').click(function () {
     $('.menu').removeClass('is-visible');
   });
+
+  $('.menu .menu__item').click(function () {
+    $('.menu').removeClass('is-visible');
+  });
   
   $('.dialog__star').click(function () {
     $(this).addClass('is-selected');
@@ -38,6 +42,6 @@ setTimeout(() => {
     $(this).nextAll().removeClass('is-selected');
   });
   
-}, 3000);
+}, 1000);
 
 

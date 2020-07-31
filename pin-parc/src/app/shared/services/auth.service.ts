@@ -43,7 +43,7 @@ export class AuthService {
             headers: new HttpHeaders({ 'Content-Type': 'application/json' })
         };
 
-        this.http.post(`admin/Token`, data, httpOptions).pipe(
+        this.http.post(`auth/Token`, data, httpOptions).pipe(
             retry(1), // retry a failed request up to 1 times
         ).subscribe( // response
             (data: any) => {
@@ -59,6 +59,44 @@ export class AuthService {
             er => {
                 //this.logError(er);
                 console.log(er);
+                alert("Invalid Credentials");
+                return false;
+            });
+    }
+
+    register(userName: string, password: string, eMail: string, fnOnSuccess: Function) {
+
+        this.tokenStoreService.deleteToken();
+
+        var data = JSON.stringify(
+            {
+                "UserName": userName,
+                "Password": password,
+                "Email": eMail
+            });
+
+        const httpOptions = {
+            headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+        };
+
+        this.http.post(`auth/CreateUser`, data, httpOptions).pipe(
+            retry(1), // retry a failed request up to 1 times
+        ).subscribe( // response
+            (data: any) => {
+
+                // var eToken = data.token.substr(1).slice(0, -1);
+
+                // this.tokenStoreService.setToken(eToken);
+
+                // this.currentUserSubject.next(this.authUser);
+                fnOnSuccess(true);
+                //this.getUserInfo();                                        
+            },
+            er => {
+                //this.logError(er);
+                console.log(er);
+                alert("Couldn't Register");
+                
                 return false;
             });
     }

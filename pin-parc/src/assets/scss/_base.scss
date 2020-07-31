@@ -30,8 +30,14 @@ body {
 
   &--dark {
     background-color: #2A2E43;
+    height: 890px;
+    .my-orders__title{
+      color:white;
+    }
   }
 }
+
+
 
 .wrapper {
   padding: 0 18px;
