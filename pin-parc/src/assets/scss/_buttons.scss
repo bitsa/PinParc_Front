@@ -1,0 +1,57 @@
+
+.btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 15px;
+  cursor: pointer;
+
+  &--lightblue {
+    background-color: #3ACCE1;
+    transition: all .2s ease-in-out;
+    &:hover {
+      background-color: lighten(#3ACCE1, 7%);
+    }
+  }
+
+  &--blue {
+    background-color: #665EFF;
+    transition: all .2s ease-in-out;
+    &:hover {
+      background-color: lighten(#665EFF, 7%);
+    }
+  }
+
+  &--purple {
+    background-color: #C840E9;
+    transition: all .2s ease-in-out;
+    &:hover {
+      background-color: lighten(#C840E9, 7%);
+    }
+  }
+
+  &--checked {
+    background-color: #78849E;
+    color: rgba(#fff,.7);
+    display: flex;
+    align-items: center;
+
+    .btn__img {
+      margin-left: 8px;
+      transform: rotate(180deg);
+    }
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--sm {
+    padding: 13px;
+  }
+}

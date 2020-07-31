@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.328" height="11.333" viewBox="0 0 24.328 11.333">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Shape" d="M338.667-26.667h16.667A2.667,2.667,0,0,1,358-24v6h0a2.667,2.667,0,0,1-2.667,2.667H338.667A2.667,2.667,0,0,1,336-18v-6h0A2.667,2.667,0,0,1,338.667-26.667Z" transform="translate(0 44)" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Shape-2" data-name="Shape" d="M359-23v4a2.17,2.17,0,0,0,1.328-2A2.17,2.17,0,0,0,359-23" transform="translate(0 44)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="Shape-3" data-name="Shape" d="M339.333-24.667h15.333A1.333,1.333,0,0,1,356-23.333v4.667h0a1.333,1.333,0,0,1-1.333,1.333H339.333A1.333,1.333,0,0,1,338-18.667v-4.667h0A1.333,1.333,0,0,1,339.333-24.667Z" transform="translate(0 44)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Battery" transform="translate(-336 -17.333)">
+    <g id="Border" clip-path="url(#clip-path)">
+      <path id="Fill" d="M2.667,0H19.333A2.667,2.667,0,0,1,22,2.667v6h0a2.667,2.667,0,0,1-2.667,2.667H2.667A2.667,2.667,0,0,1,0,8.667v-6H0A2.667,2.667,0,0,1,2.667,0Z" transform="translate(336 17.333)" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+    </g>
+    <g id="Cap" clip-path="url(#clip-path-2)">
+      <path id="Fill-2" data-name="Fill" d="M354-28h11.328v14H354Z" transform="translate(0 44)" fill="rgba(255,255,255,0.4)"/>
+    </g>
+    <g id="Capacity" clip-path="url(#clip-path-3)">
+      <path id="Fill-3" data-name="Fill" d="M333-29.667h28v17.333H333Z" transform="translate(0 44)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

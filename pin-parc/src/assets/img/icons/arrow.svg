@@ -1,0 +1,5 @@
+<svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="bg" width="24" height="24" fill="none"/>
+  <rect id="line" width="8" height="2" rx="1" transform="translate(7.414 8.464) rotate(45)" fill="#9a9da8"/>
+  <rect id="line-2" data-name="line" width="8" height="2" rx="1" transform="translate(10.3 14.121) rotate(-45)" fill="#9a9da8"/>
+</svg>

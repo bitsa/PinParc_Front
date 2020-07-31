@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33.941" height="33.941" viewBox="0 0 33.941 33.941">
+  <g id="plus" transform="translate(16.971) rotate(45)">
+    <rect id="back" width="24" height="24" fill="none"/>
+    <path id="union" d="M1482.437,669.4v-4.313h-4.687a.75.75,0,1,1,0-1.5h4.687V658.9a.75.75,0,0,1,1.5,0v4.688h4.313a.75.75,0,1,1,0,1.5h-4.313V669.4a.75.75,0,0,1-1.5,0Z" transform="translate(-567.014 -1506.264) rotate(45)" fill="#9a9da8"/>
+  </g>
+</svg>

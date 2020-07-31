@@ -1,0 +1,118 @@
+@import "../../../assets/scss/colors";
+
+.form {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tabs {
+    margin-top: 75px;
+    height: 100%;
+  
+    &__caption {
+      display: flex;
+      list-style-type: none;
+      box-shadow: 0 12px 16px rgba(#455B63,.08);
+      position: relative;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: #F4F4F6;
+      }
+  
+      & > li {
+        cursor: pointer;
+        flex: 1;
+        padding: 14px;
+        font-size: 13px;
+        font-family: inherit;
+        font-weight: 600;
+        color: $color-gray-100;
+        text-align: center;
+        position: relative;
+        &.active {
+          color: black;
+  
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background-color: #665EFF;
+          }
+        }
+  
+        &:first-child {
+          border-right: 1px solid #F4F4F6;
+        }
+      }
+    }
+    &__content {
+      background-color: #F4F4F6;
+      height: 100%;
+      display: none;
+  
+      &.active {
+        display: block;
+      }
+    }
+  
+    &--dark {
+      margin-top: 0;
+  
+      .tabs__caption {
+        box-shadow: 0 12px 16px rgba(#00020C,.2);
+        &::after {
+          background-color: #313650;
+        }
+  
+        li:first-child {
+          border-right: 1px solid #313650;
+        }
+        li {
+          color: #959DAD;
+          font-weight: 600;
+        }
+  
+        li.active {
+          color: #fff;
+          font-size: 13px;
+          &:last-child::after {
+            background-color: #C840E9;
+          }
+        }
+      }
+      .tabs__content {
+        background-color: transparent;
+        padding: 18px;
+        padding-bottom: 30px;
+        height: 590px;
+        overflow-y: scroll;
+      }
+    }
+  }
+  
+  
+  .form-wrapper {
+    padding: 24px;
+  }
+  
+  .keyboard {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transition: all .45s ease-in-out;
+  
+    &--visible {
+      bottom: 0;
+    }
+  }
+  

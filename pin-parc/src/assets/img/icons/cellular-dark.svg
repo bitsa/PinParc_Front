@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="10.667" viewBox="0 0 17 10.667">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Shape" d="M294.667-19.667h1a1,1,0,0,1,1,1v2a1,1,0,0,1-1,1h-1a1,1,0,0,1-1-1v-2a1,1,0,0,1,1-1Zm4.667-2h1a1,1,0,0,1,1,1v4a1,1,0,0,1-1,1h-1a1,1,0,0,1-1-1v-4A1,1,0,0,1,299.333-21.667ZM304-24h1a1,1,0,0,1,1,1v6.333a1,1,0,0,1-1,1h-1a1,1,0,0,1-1-1V-23A1,1,0,0,1,304-24Zm4.667-2.333h1a1,1,0,0,1,1,1v8.667a1,1,0,0,1-1,1h-1a1,1,0,0,1-1-1v-8.667a1,1,0,0,1,1-1Z" transform="translate(0 44)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Cellular_Connection" data-name="Cellular Connection" transform="translate(-293.667 -17.667)" clip-path="url(#clip-path)">
+    <path id="Fill" d="M288.667-31.333h27v20.667h-27Z" transform="translate(0 44)"/>
+  </g>
+</svg>

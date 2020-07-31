@@ -3,6 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {InputTextModule} from 'primeng/inputtext';
+
+
+import { AuthService } from './shared/services/auth.service';
+import { TokenStoreService } from './shared/services/tokenStore.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +17,14 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    InputTextModule
   ],
-  providers: [],
+  providers: [
+    AuthService,    
+    TokenStoreService    
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

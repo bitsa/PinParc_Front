@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  padding-left: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  &__icon {
+    &:first-child {
+      margin-right: auto;
+    }
+    & + .header__icon:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+}

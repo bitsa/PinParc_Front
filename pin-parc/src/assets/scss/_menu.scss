@@ -1,0 +1,112 @@
+
+
+.burger {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background-image: url(../img/icons/menu.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &--light {
+    background-image: url(../img/icons/menu-dark.svg);
+    background-color: #fff;
+    width: 54px;
+    height: 52px;
+    border-radius: 12px;
+    box-shadow: 0 12px 16px rgba(#455B63, .1);
+  }
+}
+
+
+.menu {
+  position: absolute;
+  z-index: 10;
+  height: 680px;
+  width: 300px;
+  top: calc(50% - 352px);
+  left: 0;
+  padding: 15px;
+  padding-left: 25px;
+  background-color: #2A2E43;
+  border-radius: 0 12px 12px 0;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: all .4s ease-in-out;
+  transform-style: preserve-3d;
+
+  &::before {
+    content: '';
+    position: absolute;
+    // background-color: rgba(#868B9F, .8);
+    background-color: rgba(255,255,255,0.6);
+    top: -54px;
+    left: 0;
+    width: 375px;
+    height: 812px;
+    opacity: 0;
+    transform: translateZ(-1px);
+    transition: all .1s ease-in-out;
+  }
+
+  &.is-visible {
+    transform: translateX(0);
+    visibility: visible;
+    transition: all .4s ease-in-out;
+
+    &::before {
+      opacity: 1;
+      transition-delay: .3s;
+    }
+  }
+
+  &__btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    background-image: url(../img/icons/menu.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    align-self: flex-end;
+  }
+
+  &__items {
+    margin-top: 50px;
+  }
+
+  &__item {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-family: inherit;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+
+    & + .menu__item {
+      margin-top: 34px;
+    }
+  }
+
+  &__icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 16px;
+  }
+
+  &__link {
+    font-size: 16px;
+    color: rgba(#fff, .56);
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+  }
+}
